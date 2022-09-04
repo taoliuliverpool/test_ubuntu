@@ -1,7 +1,6 @@
-import numpy
-import pandas as pd
-myarray = numpy.array([[1, 2, 3], [4, 5, 6]])
-rownames = ['a', 'b']
-colnames = ['one', 'two', 'three']
-mydataframe = pd.DataFrame(myarray, index=rownames, columns=colnames)
-print(mydataframe)
+# Load CSV using Pandas from URL
+import pandas
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+print(data.shape)
